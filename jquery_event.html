@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="jumbotron">
+        <h1 class="display-3">Jumbo heading</h1>
+    </div>
+
+    <div class="d-flex align-items-center">
+
+        <div id="d1" class="bg-warning p-4 m-4 "> Event click</div>
+        <div id="d2" class="bg-warning p-4 m-4 "> Event Double click</div>
+        <div id="d3" class="bg-warning p-4 m-4 "> Event Mouse Over</div>
+        <div id="d4" class="bg-warning p-4 m-4 "> Event Mouse out</div>
+        <div id="d5" class="bg-warning p-4 m-4 "> Event Hover</div>
+
+    </div>
+
+    <div class="d-flex">
+        <div id="d6" class="bg-warning p-4 m-4 "> Event Focus
+            <input type="text" id="z1">
+        </div>
+
+        <div id="d7" class="bg-warning p-4 m-4 "> Event Blu
+            <input type="text" id="z2">
+        </div>
+
+        <div id="d8" class="bg-warning p-4 m-4 "> Event Keydown
+            <input type="text" id="z3">
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+    $(document).ready(function () {
+        
+        $("#d1").click(function(){
+            alert("Hello");
+        });
+
+          $("#d2").dblclick(function(){
+            alert("Hello");
+        });
+
+        $("#d3").mouseover(function(){
+            alert("Hello");
+        });
+
+        $("#d4").mouseout(function(){
+            alert("Hello");
+        });
+
+        $("#d5").hover(function(){
+            alert("Hello");
+        });
+
+        $("#d6 input").focus(function(){
+            $(this).css("background-color","red")
+
+        });
+
+
+        $("#d7 input").blur(function(){
+            $(this).css("background-color","yellow")
+        });
+
+        $("#d8 input").keydown(function(){
+            $(this).css("background-color","yellow")
+        });
+    });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

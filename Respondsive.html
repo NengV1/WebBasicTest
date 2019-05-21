@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ใช้ได้หมดที่อัน</title>
+    <link rel="stylesheet" href="css/nor.css">
+<link rel="stylesheet" href="./css/custom.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">logo</div>
+        </section>
+        <a href="#" class="btnm"><i class="fas fa-bars"></i></a>
+        <section>
+        <nav>
+            <ul>
+                <li><a href="#a">a</a></li>
+                <li><a href="#b">b</a></li>
+                <li><a href="#c">c</a></li>
+                <li><a href="#d">d</a></li>
+                <li><a href="#e">e</a></li>
+            </ul>
+        </nav>
+    </section>
+    </header>
+
+    <section class="intro">
+        <video src="./video/intro.mp4"  controls autoplay muted loop>
+        </video>
+        <article>
+            <h1>I am  Neng</h1>
+        </article>
+    </section>
+
+    
+    <section class="hilight">
+        
+            <div class="content">
+        <article>
+            <img src="./images/mi3.jpg" alt="" srcset="">
+            <h1>Ba</h1>
+        </article>
+
+        <article>
+                <img src="./images/mi3.jpg" alt="" srcset="">
+                <h1>Na</h1>
+        </article>
+       
+        <article>
+                <img src="./images/mi3.jpg" alt="" srcset="">
+                <h1>Na</h1>
+        </article>
+    </div>
+    </section>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(function(){
+            $(".btnm").click (function(){
+
+                $("nav").slideToggle();
+            });
+
+            $( window ).resize(function() {
+                var window_w = $(window).width(); 
+                if (window_w >= 1170) {
+                    $("nav").show();
+                }else {
+                    $("nav").hide();
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/html5layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <title>Home</title>
+</head>
+
+<body>
+        <a name="home_link"></a>
+    <header>
+           
+        <section>
+            <a href="#home_link"><div></div></a>
+            <nav>
+
+                <ul>
+                    <li>
+                        <a href="https://www.google.co.th/search?q=cat+pic&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi57Lbp8sjcAhUBro8KHVSwAjoQ_AUICigB&biw=1366&bih=700">cat</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.co.th/search?biw=1366&bih=700&tbm=isch&sa=1&ei=kBpgW5XYJYr9vgT5povgAQ&q=dog+pic&oq=dog+pic&gs_l=img.3..0l3j0i7i30k1j0i30k1l6.12721.13080.0.13571.3.3.0.0.0.0.297.297.2-1.1.0....0...1c.1.64.img..2.1.296....0.UIi8fx0eICY">dog</a>
+                    </li>
+                    <li>
+                        <a href="#ser_link">elephant</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.co.th/search?q=snake&oq=snak&aqs=chrome.1.69i57j0l5.6449j0j7&sourceid=chrome&ie=UTF-8">snake</a>
+                    </li>
+                    <li>
+                        <a href="#folio_link">bird</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <section class="hilight">
+        <h1>Onmyoji</h1>
+        <p>
+            <a href="http://www.mustplay.in.th/game/page/Onmyoji">เล่นฟรี</a>
+        </p>
+    </section>
+
+    <section class="intro">
+
+        <div>
+            <i class="fab fa-amazon-pay fa-2x"></i>
+            <h1>NengV1</h1>
+            <p>I DON'T HAVE MONEY</p>
+        </div>
+        <div>
+            <i class="far fa-life-ring fa-2x fa-pulse"></i>
+            <h1>NengV2</h1>
+            <p>I am GOD </p>
+        </div>
+        <div>
+            <i class="far fa-compass fa-2x fa-spin"></i>
+            <h1>NengV3</h1>
+            <p>I am rich</p>
+        </div>
+    </section>
+    <a name="ser_link"></a>
+    <section class="service">
+        <h1>service</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius expedita nisi, itaque consequuntur earum possimus
+            eos eveniet excepturi omnis, recusandae animi rem assumenda error fugit maiores sunt ut doloremque.</p>
+    </section>
+
+    <a name=folio_link></a>
+    <section id="folio">
+        <h1>folio</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius expedita nisi, itaque consequuntur earum possimus
+            eos eveniet excepturi omnis, recusandae animi rem assumenda error fugit maiores sunt ut doloremque.</p>
+    </section>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href*="#"]')
+               
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function (event) {
+                
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                        location.hostname == this.hostname
+                    ) {
+                       
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top+50
+                            }, 1000, function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

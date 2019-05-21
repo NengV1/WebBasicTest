@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .content{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    
+
+    }
+
+    div[class^=box]{
+        width: 200px;
+        height: 100px;
+        border: 1px solid aqua;
+        float: left;
+        margin: 10px;
+        text-align: center;
+        padding-top: 100px;
+        transition: transform 1s;
+    }
+
+    .box_translate:hover{
+        transform: translate(10px,20px);
+    }
+
+    
+    .box_rotate:hover{
+        transform: rotate(30deg);
+    }
+
+    .box_scale:hover{
+
+        transform: scale(2,2);
+    }
+
+    .boxt_screw:hover{
+
+        transform: skew(30deg,20deg);
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box_translate">Translate</div>
+        <div class="box_rotate">Rotate</div>
+        <div class="box_scale">Scale</div>
+        <div class="boxt_screw">Screw</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>target</title>
+    <style>
+       main{
+           width: 1000px;
+           margin-left: auto;
+           margin-right: auto;
+       } 
+    section#left{
+        widows: 200px;
+        float: left;
+        position: fixed;
+    }
+    section#right{
+        width: 700px;
+        float: right;
+    }
+
+ section#right div{
+        height: 90vh;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    li{
+        border: 1px solid black;
+        padding: 5px;
+        margin: 2px;
+    }
+
+    ul li a{
+        color: brown;
+        font-size: 90px;
+        text-decoration: none;
+    }
+
+
+
+/**
+target
+#d_link:target{
+*/
+
+:target{
+
+    background-color: yellow;
+    padding: 50px
+}
+
+    </style>
+
+    <script>
+        function smscroll(){
+
+
+document.querySelector('.d_link').scrollIntoView({ behavior: 'smooth' });
+
+
+}
+
+        function smscroll2(){
+
+
+document.querySelector('.a_link').scrollIntoView({ behavior: 'smooth' });
+
+
+}
+    </script>
+
+</head>
+
+<body>
+
+    <main>
+    <section id="left">
+        <ul>
+            <li>
+                <a href="#d_link" onclick="smscroll()">d</a>
+            </li>
+            <li>
+                <a href="#a_link" onclick="smscroll2()">a</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="right">
+        <div class="d_link">
+            <h1>DDDDDDD</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente odit sunt aut repellendus nemo tempore consequatur
+                alias itaque vitae atque porro quasi magni adipisci provident autem aperiam, sit amet.
+            </p>
+        </div>
+
+        <div class="a_link" ">
+            <h1>AAAAA</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente odit sunt aut repellendus nemo tempore consequatur
+                alias itaque vitae atque porro quasi magni adipisci provident autem aperiam, sit amet.
+            </p>
+        </div>
+
+    </section>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+        <style>
+                .register-error{
+                  color: red;
+                  
+                }
+                </style>
+
+    </head>
+
+<body class="d-flex align-items-center " style="height:100vh;">
+
+    <div class="card col-lg-4 offset-lg-4">
+        <h3 class="my-4">login</h3>
+        <label>User</label>
+
+        <form id="neng" name="neng" method="POST" action="Dashboard.php">
+            <div class="form-group">
+                <input type="email" id="use" name="use" class="form-control">
+            </div>
+            <label>Pass</label>
+            <div class="form-group">
+                <input type="password" id="pass" name="pass" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="btns" class="btn btn-success btn-lg btn-block">SS </button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.validate.min.js"></script>
+<!-- <script>
+            $(function () {
+                $('button#btns').click(function () {
+                    var us = $('input#use').val();
+                    var passa = $('input#pass').val();
+                    if (us != " " && passa != " ") {
+                        if (us == "admin" && passa== "admin" ) {
+                            window.location = "dash.html";
+                        } else {
+                            alert('ผิด');
+                        }
+              
+                        
+                    } else {
+                        alert('ผิด');
+                    }
+                });
+            });
+        </script> -->
+
+        <script>
+                $(function(){
+                  $('#neng').validate({
+                rules:{
+                  use:{
+                      required:true
+                    },
+                    pass:{
+                      required:true
+                    }
+                },
+                messages:{
+                  use:{
+                      required:"aaaaaaaaa",
+                      email:"ป้อนไม่ถูก"
+                    },
+                    pass:{
+                      required:"zzzzzzz"
+                    }                    
+                },
+                errorClass:"register-error",
+                  errorPlacement:function(error,element){
+                    error.appendTo(element.parent());
+                  },
+                  submitHandler:function(form){
+                        alert('success')
+                        window.location.href="Dashboard.html";
+                  }
+                  });
+            
+                });
+                
+                </script>
+             
+</body>
+
+</html>
